@@ -1,0 +1,5 @@
+php_errors.log
+node_modules
+.env
+vendor
+.DS_Store
