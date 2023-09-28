@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace Controllers;
 
@@ -15,10 +15,12 @@ class APIEventos {
         $categoria_id = filter_var($categoria_id, FILTER_VALIDATE_INT);
 
         if(!$dia_id || !$categoria_id) {
-            echo json_encode([]);
+           echo json_encode([]);
+           return;
         }
 
-        //Consultar la dase de datos
-        $eventos = EventoHorario::
+        // Consultar la base de datos
+        $eventos = EventoHorario::whereArray(['dia_id' => $dia_id, 'categoria_id' => $categoria_id]) ?? [];
+        echo json_encode($eventos);
     }
 }
