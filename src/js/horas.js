@@ -73,6 +73,9 @@
             e.target.classList.add('horas__hora--seleccionada');
 
             inputHiddenHora.value = e.target.dataset.horaId;
+
+            //Llenar el campo oculto de dia
+            inputHiddenDia.value = document.querySelector('[name="dia"]:checked').value;
         }
     }
 })(); //siempre ; en IFFIE
