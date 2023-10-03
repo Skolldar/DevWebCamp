@@ -131,6 +131,13 @@ class ActiveRecord {
         return $resultado;
     }
 
+    //Retornar los registros por orden
+    public static function ordenar($columna, $orden) {
+        $query = "SELECT * FROM " . static::$tabla . " ORDER BY ${columna}  ${orden} " ;
+        $resultado = self::consultarSQL($query);
+        return $resultado;
+    }
+
     // Busqueda Where con Columna 
     public static function where($columna, $valor) {
         $query = "SELECT * FROM " . static::$tabla . " WHERE ${columna} = '${valor}'";

@@ -21,3 +21,7 @@ h3 {
 [class$="__heading"] { //busca la clase y se selecciona los atributos $ es quqe finalice con heading 
     @include m.nombre-pagina;
 }
+
+[class$="__descripcion"] { //busca la clase y se selecciona los atributos $ es quqe finalice con heading 
+    @include m.descripcion-pagina;
+}

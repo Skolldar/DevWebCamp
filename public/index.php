@@ -7,6 +7,7 @@ use Controllers\APIEventos;
 use Controllers\APIPonentes;
 use Controllers\AuthController;
 use Controllers\EventosController;
+use Controllers\PaginasController;
 use Controllers\RegalosController;
 use Controllers\PonentesController;
 use Controllers\DashboardController;
@@ -57,6 +58,7 @@ $router->get('/admin/eventos/crear', [EventosController::class, 'crear']);
 $router->post('/admin/eventos/crear', [EventosController::class, 'crear']);
 $router->get('/admin/eventos/editar', [EventosController::class, 'editar']);
 $router->post('/admin/eventos/editar', [EventosController::class, 'editar']);
+$router->post('/admin/eventos/eliminar', [EventosController::class, 'eliminar']);
 
 
 //API HORARIOS
@@ -75,6 +77,16 @@ $router->get('/admin/registrados', [RegistradosController::class, 'index']);
 
 //Area de Regalo
 $router->get('/admin/regalos', [RegalosController::class, 'index']);
+
+
+
+//AREA PUBLICA
+$router->get('/', [PaginasController::class, 'index']);
+$router->get('/devwebcamp', [PaginasController::class, 'eventos']);
+$router->get('/paquetes', [PaginasController::class, 'paquetes']);
+$router->get('/workshops-conferencias', [PaginasController::class, 'conferencias']);
+
+
 
 
 
