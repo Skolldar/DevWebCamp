@@ -88,6 +88,4 @@ $router->get('/workshops-conferencias', [PaginasController::class, 'conferencias
 
 
 
-
-
 $router->comprobarRutas();
