@@ -10,6 +10,7 @@ use Controllers\EventosController;
 use Controllers\PaginasController;
 use Controllers\RegalosController;
 use Controllers\PonentesController;
+use Controllers\RegistroController;
 use Controllers\DashboardController;
 use Controllers\RegistradosController;
 
@@ -77,6 +78,16 @@ $router->get('/admin/registrados', [RegistradosController::class, 'index']);
 
 //Area de Regalo
 $router->get('/admin/regalos', [RegalosController::class, 'index']);
+
+
+//Registro de Usuarios
+$router->get('/finalizar-registro', [RegistroController::class, 'crear']);
+$router->post('/finalizar-registro/gratis', [RegistroController::class, 'gratis']);
+
+
+//Boleto Virtual 
+$router->get('/boleto', [RegistroController::class, 'boleto']);
+
 
 
 
