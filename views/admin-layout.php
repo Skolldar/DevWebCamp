@@ -25,7 +25,9 @@
                 ?> 
             </main>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.1.2/dist/chart.umd.min.js"></script>    
 
+    
     <script src="/build/js/main.min.js" defer></script>
 </body>
 </html>
